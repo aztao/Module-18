@@ -1,15 +1,3 @@
-
-/*.heroContainer {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom,rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)), url("images/donatehero.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  overflow: hidden;
-}*/
-
 header{
   background-image: linear-gradient(to bottom,rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)), url("images/donatehero.png");
   background-size: 100% auto;
@@ -37,8 +25,8 @@ nav{
 
 .topnav {
   font-family:"Nunito Sans";
-  font-size: 1vw;
-  overflow: hidden;
+  font-size:calc(12px + 1vw);
+  /*overflow: hidden;*/
   position: relative;
   top: 0;
   /*background-color: hsla(0, 0%, 0%, 0.25);*/
@@ -53,7 +41,6 @@ nav{
   float:left;
   cursor: pointer;
 }
-
 
 .searchBar {
   float: right;
@@ -117,47 +104,14 @@ nav{
   text-align: left;
   margin-left: 10%;
   color: #FDFDFC;
+  font-size:calc(12px + 1vw);
 }  
-
-/*#heroGrid{
-  margin: 0px 5%;
-  display: grid;
-  min-height: 500px;
-  height: 70vh;
-  grid-template-rows: 10% 90%;
-  grid-template-columns: 10% 90%;
-  grid-template-areas:
-  "logo searchBar"
-  "logo nav";
-}
-
-#logo{
-  grid-area:logo;
-  background-image: url(images/logo.png);
-}
-
-#searchBar{
-  grid-area: searchBar;
-}
-
-#nav{
-  grid-area: nav;
-}*/
-
-h1{
-  font-family: "Noto Serif", serif;
-  font-size: 5vw;
-  font-weight: 400;
-  color: #FDFDFC;
-}
-
-
 
 .button0{
   padding: 1% 5% 1% 5%;
   background-color: #FDFDFC;
   font-family: "Nunito Sans", bold;
-  font-size: 1vw;
+  font-size:calc(12px + 1vw);
   color: #0A0A0A;
   border: none;
   border-radius: 10px;
@@ -183,17 +137,29 @@ h1{
   padding: 1% 5% 1% 5%;
   background-color: #3A844A;
   font-family: "Nunito Sans", bold;
-  font-size: 24;
+  font-size:calc(12px + 1vw);
   color: #FDFDFC;
   border: none;
-  border-radius: 10px;
-  float: right;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+.centerAlign{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  color: #FDFDFC;
+  font-size:calc(12px + 5vw);
+}
 
 h2{
   font-family: "Noto Serif", serif;
-  font-size: 84;
+  font-size:calc(12px + 4vw);
   color: #FDFDFC;
   text-align: center;
 }
@@ -205,19 +171,29 @@ h3{
   text-align: center;
 }
 
-h4{
+h4{ /*for the drop down boxes*/
   font-family: "Noto Serif", serif;
-  font-size: 40;
+  font-size:calc(12px + 3vw);
+  color: #FDFDFC;
+  text-align: left;
+}
+
+h5{
+  font-family: "Nunito Sans", bold;
+  font-size:calc(12px + 2vw);
+  color:#00853E
+}
+
+h6{
+  font-family: "Noto Serif", serif;
+  font-size:calc(12px + 4vw);
   color: #FDFDFC;
   text-align: left;
 }
 
 body{
   background-color: #121212;
-
 }
-
-
 
 hr{
   color: #FDFDFC;
@@ -225,7 +201,7 @@ hr{
 
 footer{
   font-family: "Nunito Sans", bold;
-  font-size: 24;
+  font-size:calc(12px + 1vw);
   color: #FDFDFC;
 }
 
@@ -250,8 +226,6 @@ footer{
   grid-area: footIcon;
 }
 
-
-
 .footBox{
   float: right;
   display: flex;
@@ -261,11 +235,56 @@ footer{
 
 .container{
   background-color: #1A1A1A;
+  padding: 5%;
+  margin: 10%;
+  font-family: "Nunito Sans", bold;
+  font-size:calc(12px + 2vw);
+  color: #FDFDFC;
 }
 
 .dropContainer{
   background-color: #1A1A1A;
+  padding: 5%;
+  margin: 10%;
+  font-family: "Nunito Sans", bold;
+  font-size:calc(12px + 1vw);
+  color: #FDFDFC;
 }
+
+.openToggle{
+  background-image: url("images/toggle2.png");
+  float: right;
+  height: 50px;
+  width: 50px;
+}
+
+.closedToggle{
+  background-image: url("images/toggle1.png")
+}
+
+@media only screen and (max-width: 600px) {
+  #footGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "footLinks" 
+    "footMedia"
+    "footIcon"
+    ;
+  }
+}
+
+/*.heroContainer {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom,rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)), url("images/donatehero.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  overflow: hidden;
+}*/
+
 
 /* 
 .footContainer{
@@ -412,8 +431,27 @@ container with 3 icons
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }*/
 
-/*grid notes
+/*#heroGrid{
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 10% 90%;
+  grid-template-areas:
+  "logo searchBar"
+  "logo nav";
+}
 
+#logo{
+  grid-area:logo;
+  background-image: url(images/logo.png);
+}
 
+#searchBar{
+  grid-area: searchBar;
+}
 
-*/
+#nav{
+  grid-area: nav;
+}*/
