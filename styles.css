@@ -1,47 +1,59 @@
-.heroContainer {
+
+/*.heroContainer {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom,rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)), url("images/epichero.png");
-  background-position: center;
+  background-image: linear-gradient(to bottom,rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)), url("images/donatehero.png");
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
+}*/
+
+header{
+  background-image: linear-gradient(to bottom,rgba(18, 18, 18, 1), rgba(0, 0, 0, 0)), url("images/donatehero.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  font-family: "Nunito Sans";
+  font-size: 24;
+  font-weight: 700;
+  color: #FDFDFC;
+}
+
+nav{
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .heroBox {
-  width: 83%;
-  height: 200px;
-  top: 227px;
-  background-image: url("images/epicherocontainer.png");
+  background-image: url("images/donatecontainerclear.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  margin: auto;
-  position: absolute;
+  background-size: contain;
+  position: relative;
   padding: 10%;
-  border-radius: 50px;
+  margin: 0% 10% 10% 10%;
 }
 
 .topnav {
   font-family:"Nunito Sans";
-  font-size: 24pt;
+  font-size: 1vw;
   overflow: hidden;
-  position: sticky;
+  position: relative;
   top: 0;
   /*background-color: hsla(0, 0%, 0%, 0.25);*/
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
 }
   
 .logo {
   position: relative;
-  left:10px;
-  top:10px;
+  float:left;
+  cursor: pointer;
 }
 
-.bar {
-  margin: right;
-}
 
 .searchBar {
   float: right;
@@ -53,19 +65,29 @@
   box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
   border-radius: 5px;
+  cursor: text;
 }
 
 .iconBar{
   margin:auto;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .searchIcon{
   float: right;
   padding: 5%;
+  cursor: pointer;
 }
 
 .calendarIcon{
   position: relative;
+  height: 50px;
+  width: 50px;
+  padding: 5%;
+  cursor: pointer;
 }
 
 .topnav a {
@@ -97,29 +119,53 @@
   color: #FDFDFC;
 }  
 
+/*#heroGrid{
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 10% 90%;
+  grid-template-areas:
+  "logo searchBar"
+  "logo nav";
+}
+
+#logo{
+  grid-area:logo;
+  background-image: url(images/logo.png);
+}
+
+#searchBar{
+  grid-area: searchBar;
+}
+
+#nav{
+  grid-area: nav;
+}*/
+
 h1{
   font-family: "Noto Serif", serif;
-  font-size: 96;
+  font-size: 5vw;
   font-weight: 400;
   color: #FDFDFC;
 }
 
-header{
-  font-family: "Nunito Sans";
-  font-size: 24;
-  font-weight: 700;
-  color: #FDFDFC;
-}
+
 
 .button0{
   padding: 1% 5% 1% 5%;
   background-color: #FDFDFC;
   font-family: "Nunito Sans", bold;
-  font-size: 48;
+  font-size: 1vw;
   color: #0A0A0A;
   border: none;
   border-radius: 10px;
   position: relative;
+  height: 50px;
+  width: auto;
+  margin-right: 5%;
+  cursor: pointer;
 }
 
 .button1{
@@ -135,7 +181,7 @@ header{
 
 .button2{
   padding: 1% 5% 1% 5%;
-  background-color: #00381A;
+  background-color: #3A844A;
   font-family: "Nunito Sans", bold;
   font-size: 24;
   color: #FDFDFC;
@@ -144,16 +190,6 @@ header{
   float: right;
 }
 
-.button3{
-  padding: 1% 5% 1% 5%;
-  background-color: #3A844A;
-  font-family: "Nunito Sans", bold;
-  font-size: 20;
-  color: #FDFDFC;
-  border: none;
-  border-radius: 10px;
-  float: right;
-}
 
 h2{
   font-family: "Noto Serif", serif;
@@ -178,44 +214,10 @@ h4{
 
 body{
   background-color: #121212;
-  position: relative;
+
 }
 
-.parentRow1 {
-  display: flex;
-  height: 50%;
-  width: 90%;
-  margin: auto;
-  flex-direction: row;
-  background-color: #121212;
-}
 
-.childContainer1 {
-  display: flex;
-  flex-direction: column;
-  background-color: #3A844A;
-  font-family: "Nunito Sans";
-  font-size: 20;
-  color: #FDFDFC;
-  padding: 5%;
-} 
-
-.parentRow2{
-  display: flex;
-  height: 5%;
-  width: 5%;
-  flex-direction: row;
-}
-
-.childContainer2{
-  flex-direction: column;
-  display:flex;
-  background-color: #121212;
-  font-family: "Nunito Sans";
-  font-size: 20;
-  color: #FDFDFC;
-  padding: 5%;
-}
 
 hr{
   color: #FDFDFC;
@@ -227,6 +229,45 @@ footer{
   color: #FDFDFC;
 }
 
+#footGrid{
+  display: grid;
+  grid-template-rows: 60% 40%;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+  "footLinks footMedia"
+  "footLinks footIcon";
+}
+
+#footLinks{
+  grid-area: footLinks;
+}
+
+#footMedia{
+  grid-area: footMedia;
+}
+
+#footIcon{
+  grid-area: footIcon;
+}
+
+
+
+.footBox{
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  background-color: #1A1A1A;
+}
+
+.dropContainer{
+  background-color: #1A1A1A;
+}
+
+/* 
 .footContainer{
   display: flex;
   height: 50%;
@@ -234,12 +275,7 @@ footer{
   flex-direction: column;
 }
 
-.footBox{
-  float: right;
-}
-
-
-/* parent and child containers
+parent and child containers
 
 all children are the same size - attempt flexbox
 
@@ -293,7 +329,45 @@ container with 3 icons
 
 */
 
-/*scraps*/
+/*scraps
+
+.parentRow1 {
+  display: flex;
+  height: 50%;
+  width: 90%;
+  margin: auto;
+  flex-direction: row;
+  background-color: #121212;
+}
+
+.childContainer1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #3A844A;
+  font-family: "Nunito Sans";
+  font-size: 20;
+  color: #FDFDFC;
+  padding: 5%;
+} 
+
+.parentRow2{
+  display: flex;
+  height: 5%;
+  width: 5%;
+  flex-direction: row;
+}
+
+.childContainer2{
+  flex-direction: column;
+  display:flex;
+  background-color: #121212;
+  font-family: "Nunito Sans";
+  font-size: 20;
+  color: #FDFDFC;
+  padding: 5%;
+}
+
+*/
 
 /*.header {
   padding: 60px;
